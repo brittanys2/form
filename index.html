@@ -2,46 +2,67 @@
 <html>
   <head> Form Index </head>
   <body>
+    <!--form action is location data is sent to, method="post" makes data send out-->
     <form action="https://www.google.com" method="post">
-      <input type="text" name="username">
-      <input type="date" name="birthday">
-      <input type="time" name="game-time">
-      <input type="email" name="email-address" required>
-      <input type="url" name="website">
-      <input type="number" name="cost">
-      <input type="tel" name="phone-number">
+      <input type="text" name="username">Username
+      <!--type="date" opens calendar for filling info rather than defualt qwerty-->
+      <input type="date" name="birthday">Birthday
+      <!--type="time" opens clock for filling out info rather than default qwerty-->
+      <input type="time" name="game-time">Time
+      <!--type="email" opens specialized keyboard containing @ for typing email addresses-->
+      <!--attribute required disables submit until this specific input is filled out-->
+      <input type="email" name="email-address" required>Email
+      <!--type="url" opens specialized keyboard containing .com, .net, etc for typing urls-->
+      <input type="url" name="website">Website
+      <!--type="number" opens specialized number keyboard rather than default qwerty for typing values-->
+      <input type="number" name="cost">Cost
+      <!--type="tel" opens specialized number keyboard rather than default qwerty for typing phone numbers-->
+      <input type="tel" name="phone-number">Phone Number
 
+      <!--textarea is placeholder text in box describing what the input requires-->
       <textarea>
         Add your comment here
       </textarea>
 
+      <!--radio is a single-choice toggle button-->
       <input type="radio" name="day" value="Friday" checked>Friday
+      <!--attribute checked makes value default selection until changed by user-->
       <input type="radio" name="day" value="Saturday">Saturday
       <input type="radio" name="day" value="Sunday">Sunday
+      <!--name="day" groups them together under the same context, value gives them
+      individual status,words outside of > show up visually & describe the value-->
 
+      <!--checkbox is a multi-choice checklist-->
       <input type="checkbox" name="day" value="Friday">Friday
       <input type="checkbox" name="day" value="Saturday">Saturday
       <input type="checkbox" name="day" value="Sunday">Sunday
 
+      <!--multiple is a dropdown list that allows for multiple selections when shift+clicking options-->
       <select name="day" multiple>
         <option value="Friday">Friday</option>
         <option value="Saturday">Saturday</option>
         <option value="Sunday">Sunday</option>
       </select>
 
+      <!--Submits information filled out above-->
       <input type="submit" name="submit" value="submit here">
 
+      <!--Submits info filled out above but allows for text to be stylized visually-->
       <button type="submit" name="submit" value="submit here">
         <em>Submit your info here</em>
       </button>
 
+      <!--Requires username for site & type="text" specifies method for inputting information via type-->
       <label for="username">Username</label>
       <input type="text" name="user-name" id="username">
 <br>
 <br>
 <br>
 <br>
+
+      <!--Groups different controls together in one cohesive box-->
       <fieldset>
+        <!--Labels the fieldset-->
         <legend>Login</legend>
         <label>Username
           <input type="text" name="username">
